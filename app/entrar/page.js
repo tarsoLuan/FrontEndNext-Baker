@@ -1,7 +1,9 @@
 'use client'
-import React from "react";
 
-export default function Coffeehouse() {
+import React from "react";
+import { handleSignIn } from '../lib/users';
+
+export default function LoginForm() {
 
     let inputs = {
         email: "",
@@ -11,6 +13,11 @@ export default function Coffeehouse() {
     const onChangeValue = (e) => {
       inputs[e.target.name] = e.target.value;
       console.log(inputs);
+    }
+
+    const onSubmit = (e) => {
+      e.preventDefault();
+      handleSignIn(inputs);
     }
 
     let isLoading = false;
@@ -26,10 +33,10 @@ export default function Coffeehouse() {
            
             <form name="form-hook" className="pt-10">
                 
-                <input className="w-full mb-4 bg-transparent border-b" type="email" name="email" placeholder="E-mail" onChange={onChangeValue}/> <br></br>
-                <input className="w-full mb-4 bg-transparent border-b" name="password" type="password" placeholder="Senha" onChange={onChangeValue}/> <br></br>
+                <input className="w-full mb-4 bg-transparent border-b" type="email" name="email" placeholder="E-mail" onChange={(e) => onChangeValue(e)}/> <br></br>
+                <input className="w-full mb-4 bg-transparent border-b" name="password" type="password" placeholder="Senha" onChange={(e) => onChangeValue(e)}/> <br></br>
                 <div className="text-center pt-2">
-                  <button className="bg-[#E89C38] hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+                  <button className="bg-[#E89C38] hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center" onClick={onSubmit}>
                         <span className="pl-2">Entrar</span>
                   </button>
                 </div>

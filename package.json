@@ -15,21 +15,36 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@vercel/postgres": "^0.5.1",
+    "aws-sdk": "^2.1524.0",
     "bcrypt": "^5.1.1",
     "bootstrap": "^5.3.2",
     "flowbite-react": "^0.7.2",
+    "fs": "^0.0.1-security",
+    "net": "^1.0.2",
     "next": "14.0.4",
+    "next-auth": "^5.0.0-beta.4",
+    "nock": "^13.4.0",
     "react": "^18",
     "react-bootstrap": "^2.9.1",
     "react-dom": "^18",
     "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "tls": "^0.0.1"
   },
   "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
+    "html-loader": "^4.2.0",
+    "mock-aws-s3": "^4.0.2",
     "postcss": "^8",
     "tailwindcss": "^3.3.0"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false,
+    "child_process": false
   }
 }

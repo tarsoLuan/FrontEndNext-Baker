@@ -1,0 +1,7 @@
+.main__banner {
+  background: url(../public/assets/banner.jpg) no-repeat center center;
+  background-size: cover;
+  height: 80vh;
+  position: relative;
+  z-index: 1;
+}

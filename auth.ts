@@ -4,12 +4,13 @@ import bcrypt from "bcrypt";
 import { z } from "zod";
 import { authConfig } from "./auth.config";
 import { getUser } from './app/lib/users'
+import type { Users } from "./app/lib/types";
 
 export const { auth, signIn, signOut } = NextAuth({
     ...authConfig,
     providers: [
         Credentials({
-            async authorize(credentials) {
+            async authorize(credentials: any) {
                 const parsedCredentials = z
                     .object({ email: z.string().email(), password: z.string().min(6) })
                     .safeParse(credentials);
@@ -28,7 +29,7 @@ export const { auth, signIn, signOut } = NextAuth({
                     const passwordOk = await bcrypt.compare(password, user.password);
                     if (passwordOk){
                         console.log('rolou ->' + user.email);
-                        return user;
+                        return user as any;
                     
                     };
                 }

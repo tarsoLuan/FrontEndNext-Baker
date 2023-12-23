@@ -14,14 +14,23 @@ export const { auth, signIn, signOut } = NextAuth({
                     .object({ email: z.string().email(), password: z.string().min(6) })
                     .safeParse(credentials);
 
-                if (parsedCredentials.success) {
+                if (parsedCredentials.success == true) {
                     const { email, password } = parsedCredentials.data;
 
                     const user = await getUser(email);
-                    if (!user) return null;
+                    console.log('user ->' + JSON.stringify(user))
+
+                    if (!user) {
+                        console.log('n rolou');
+                        return null;
+                    };
 
                     const passwordOk = await bcrypt.compare(password, user.password);
-                    if (passwordOk) return user;
+                    if (passwordOk){
+                        console.log('rolou ->' + user.email);
+                        return user;
+                    
+                    };
                 }
 
                 console.log('Login inválido');

@@ -1,6 +1,6 @@
 'use server';
 
-import { signIn, signOut } from "../../auth";
+import { signIn, signOut } from "../../pages/api/auth/[...nextauth]";
 import { AuthError } from "next-auth";
 import { sql } from '@vercel/postgres';
 import type { Users } from "../lib/types";

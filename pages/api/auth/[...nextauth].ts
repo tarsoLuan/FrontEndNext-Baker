@@ -2,12 +2,12 @@ import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import bcrypt from "bcrypt";
 import { z } from "zod";
-import { authConfig } from "./auth.config";
-import { getUser } from './app/lib/users'
-import type { Users } from "./app/lib/types";
+import { authConfig } from "../../../auth.config";
+import { getUser } from './../../../app/lib/users'
 
 export const { auth, signIn, signOut } = NextAuth({
     ...authConfig,
+    secret:process.env.AUTH_SECRET,
     providers: [
         Credentials({
             async authorize(credentials: any) {

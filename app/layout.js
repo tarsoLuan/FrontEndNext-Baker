@@ -2,9 +2,11 @@
 import { Urbanist } from 'next/font/google'
 import Image from 'next/image'
 import { handleSignOut } from './lib/users';
+import { SessionProvider } from 'next-auth/react';
+import  session from 'next-auth'
+import  SessionApp from '../public/components/session'
 import './globals.css'
 import './layout.style.css'
-import Head from 'next/head';
 
 const inter = Urbanist({ subsets: ['latin'] })
 
@@ -14,28 +16,16 @@ const inter = Urbanist({ subsets: ['latin'] })
 // }
 
 export default function RootLayout({ children }) {
-  let user;
-
   const sair = () => {
     handleSignOut();
   }
   
-  let li;
-  if(user) {
-    li = <li>
-      <a href="/entrar">{user.name}</a>
-    </li>
-  } else {
-    li = <li>
-      <a href="/entrar">Entrar</a>
-    </li>
-  }
-
   return (
     <html lang="en">
       <head>
         <title>Baker</title>
       </head>
+      <SessionProvider session={session}> 
       <div id="main-navbar" className="navbar sticky top-0 z-50">
         <div className={inter.className}>
           <nav className='flex flex-col items-center justify-between'>
@@ -56,7 +46,9 @@ export default function RootLayout({ children }) {
               <li>
                 <a onClick={sair}>Carrinho</a>
               </li>
-              {li}
+              <li>
+                <SessionApp session={session}/>
+              </li>
               <li>
                 <a href="/cadastrar">Cadastrar</a>
               </li>
@@ -66,7 +58,8 @@ export default function RootLayout({ children }) {
       </div>
       <body className={inter.className}>
         {children}
-        </body>
+      </body>
+      </SessionProvider>
     </html>
   )
 }

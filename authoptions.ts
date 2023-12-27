@@ -1,6 +1,6 @@
 import type { NextAuthConfig } from "next-auth";
 
-export const authConfig = {
+export const authOptions = {
     callbacks: {
         authorized({auth, request: { nextUrl}}) {
             console.log('auth ->' + JSON.stringify(auth))
@@ -17,6 +17,11 @@ export const authConfig = {
             }
             return true;
         },
+        // session({session, user}) {
+        //     console.log('sessionkk ->' + JSON.stringify(session))
+        //     session.user = user;
+        //     return session;
+        // },
     },
     providers: [],
 } satisfies NextAuthConfig;

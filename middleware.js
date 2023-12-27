@@ -1,7 +1,7 @@
 import NextAuth from "next-auth";
-import { authConfig } from "./auth.config";
+import { authOptions } from "./authoptions";
 
-export default NextAuth(authConfig).auth;
+export default NextAuth(authOptions).auth;
 
 export const config = {
     matcher : ['/((?!api|_next/static|_next/image|images|icon.ico).*)',]

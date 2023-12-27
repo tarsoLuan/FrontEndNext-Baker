@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState  } from "react";
-import ProductCard from "../public/components/card";
+import ProductCard from "./components/card";
 import Slider from 'react-slick';
 
 import 'slick-carousel/slick/slick.css';

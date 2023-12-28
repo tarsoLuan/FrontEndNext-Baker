@@ -3,7 +3,7 @@ import type { NextAuthConfig } from "next-auth";
 export const authOptions = {
     callbacks: {
         authorized({auth, request: { nextUrl}}) {
-            console.log('auth ->' + JSON.stringify(auth))
+            // console.log('auth ->' + JSON.stringify(auth))
             const isLoggedIn = !!auth?.user;
             const isOnLogin = nextUrl.pathname.startsWith('/entrar');
 

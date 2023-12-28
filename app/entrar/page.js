@@ -15,7 +15,7 @@ export default function LoginForm() {
 
     const onChangeValue = (e) => {
       inputs[e.target.name] = e.target.value;
-      console.log(inputs);
+      // console.log(inputs);
     }
 
     let isLoading = false;

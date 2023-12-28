@@ -22,19 +22,19 @@ export const { auth, signIn, signOut } = NextAuth({
                     console.log('user ->' + JSON.stringify(user))
 
                     if (!user) {
-                        console.log('n rolou');
+                        // console.log('n rolou');
                         return null;
                     };
 
                     const passwordOk = await bcrypt.compare(password, user.password);
                     if (passwordOk){
-                        console.log('rolou ->' + user.email);
+                        // console.log('rolou ->' + user.email);
                         return user as any;
                     
                     };
                 }
 
-                console.log('Login inválido');
+                // console.log('Login inválido');
                 return null;
             },
         }),

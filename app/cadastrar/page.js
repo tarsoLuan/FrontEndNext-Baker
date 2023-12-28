@@ -16,7 +16,7 @@ export default function Coffeehouse() {
 
 	const onChangeValue = (e) => {
 		inputs[e.target.name] = e.target.value;
-		console.log(inputs);
+		// console.log(inputs);
 	}
 
 	useMemo(() => {

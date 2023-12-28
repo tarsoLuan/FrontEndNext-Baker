@@ -34,7 +34,7 @@ export default function ProductSlider() {
     return (
         <Slider {...settings}>
             {products && products.map((product) => (
-                <div>
+                <div key={product.id}>
                     <ProductCard props={product}/>
                 </div>
             ))}

@@ -15,13 +15,13 @@ export default async function Home() {
         </div>
       </div>
       <hr
-            style={{
-                color: "#FFF",
-                backgroundColor: "#FFF",
-                height: 1
-            }}
-        />
-      <div className="pt-10">
+        style={{
+            color: "#FFF",
+            backgroundColor: "#FFF",
+            height: 1
+        }}
+      />
+      <div className="pt-10 pb-10">
         <h1 className="text-[#d98b48] pb-4" style={{fontSize:"50px", paddingLeft:"23%"}}>Sobre</h1>
         <div className="text-[#FFF] flex justify-center">
           <div style={{width:"54%", textAlign:"justify", lineHeight:"30px"}}>
@@ -37,6 +37,16 @@ export default async function Home() {
             excede as expectativas e a efemeridade do instante se converte em um legado duradouro.
           </div>
         </div>
+      </div>
+      <hr
+        style={{
+            color: "#FFF",
+            backgroundColor: "#FFF",
+            height: 1
+        }}
+      />
+      <div className="pt-10">
+        <h1 className="text-[#d98b48] pb-4" style={{fontSize:"50px", paddingLeft:"23%"}}>Localização</h1>
       </div>
     </main>
   )

@@ -47,6 +47,16 @@ export default async function Home() {
       />
       <div className="pt-10">
         <h1 className="text-[#d98b48] pb-4" style={{fontSize:"50px", paddingLeft:"23%"}}>Localização</h1>
+        <div className="text-[#FFF] flex justify-center">
+          <div className="flex items-center" style={{width:"54%"}}>
+            <img style={{width:"70%"}} src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYTfB0oUVDvAMq3i-i4zwkiMwYpRk84ZViYbjVYzO-mI9lGomKe-ewpqYwuewpQl03GDIHfNj6xF7DMWE09xRCK8UPhVvg=s1600"/>
+            <div className="pl-10" style={{fontSize:"16px", textAlign:"justify", lineHeight:"30px"}}>
+              <p>Rua Padre Viêira, 588 - Bairro Jardim</p>
+              <p>Santo André - SP</p>
+              <p>09090-720</p>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   )

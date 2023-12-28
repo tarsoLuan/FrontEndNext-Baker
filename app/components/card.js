@@ -9,8 +9,8 @@ const ProductCard = props => {
   return (
     <div>
         <div style={{height:"340px", width:"100%"}} className="flex">
-        <div style={{height:"340px", width:"210px"}}>
-            <img style={{width:"320px"}} src={props.props.imageurl} alt="Baker Logo" />
+        <div className="flex items-center justify-center" style={{height:"340px", width:"210px"}}>
+            <img style={{width:"320px"}} src={props.props.imageurl} alt="Image" />
         </div>
         <div style={{width:"80%", padding:"0 20px"}}>
             <b style={{fontSize:"50px", color:"white"}}>{props.props.name}</b>

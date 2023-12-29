@@ -34,7 +34,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "app/components/googleMap.js"  ],
+, "app/components/googleMap.js", "app/produtos/[id]/page.js"  ],
   "exclude": [
     "node_modules"
   ]

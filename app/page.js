@@ -45,7 +45,7 @@ export default async function Home() {
             height: 1
         }}
       />
-      <div className="pt-10">
+      <div className="pt-10 pb-10">
         <h1 className="text-[#d98b48] pb-4" style={{fontSize:"50px", paddingLeft:"23%"}}>Localização</h1>
         <div className="text-[#FFF] flex justify-center">
           <div className="flex items-center" style={{width:"54%"}}>
@@ -55,6 +55,32 @@ export default async function Home() {
               <p>Santo André - SP</p>
               <p>09090-720</p>
             </div>
+          </div>
+        </div>
+      </div>
+      <hr
+        style={{
+            color: "#FFF",
+            backgroundColor: "#FFF",
+            height: 1
+        }}
+      />
+      <div className="pt-10 pb-2 footer">
+        <div className="pl-10 pb-6">
+          <img style={{width:"10%"}} src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYTUK1k5ZBXmiatCTuxi6JCVE2x56o1IoV507rg9inGiP8zZeo9I9sMZPiKqcI1vnCgkAOqjStChLa5Y8ED-jNz-FUJu=s2560"/>
+        </div>
+        <div className="pl-10 flex text-[#FFF]">
+          <div style={{width:"85%"}}>
+            Rua Padre Viêira, 588 - Bairro Jardim, Santo André - SP
+          </div>
+          <div className="pr-4">
+            Contato
+          </div>
+          <div className="pr-4">
+            Facebook
+          </div>
+          <div className="pr-4">
+            Ifood
           </div>
         </div>
       </div>

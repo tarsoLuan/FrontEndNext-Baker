@@ -24,3 +24,14 @@ export async function getAllProducts() {
         throw new Error("Não foi possível encontrar os produtos");
     }
 }
+
+export async function getProductById(id: string) {
+    try {
+        const product = await sql<Products>`SELECT * FROM products WHERE id = ${id}`;
+        console.log(product.rows);
+        return product.rows[0];
+    } catch (error) {
+        console.log(error);
+        throw new Error("Não foi possível encontrar o produto");
+    }
+}

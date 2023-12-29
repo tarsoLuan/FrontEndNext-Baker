@@ -24,14 +24,16 @@ export default function RootLayout({ children }) {
           <div className={inter.className}>
             <nav className='flex flex-col items-center justify-between'>
               <ul>
-                <Image
-                  src="/assets/white-logo.png"
-                  className='nav__logo'
-                  width={50}
-                  height={50}
-                  alt="Baker Logo"
-                  href="/"
-                />
+                <a href="/">
+                  <Image
+                    src="/assets/white-logo.png"
+                    className='nav__logo'
+                    width={50}
+                    height={50}
+                    alt="Baker Logo"
+                    href="/"
+                  />
+                </a>
                 <li>
                   <a href="/produtos">Produtos</a>
                 </li>

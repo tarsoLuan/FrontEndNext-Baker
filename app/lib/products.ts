@@ -13,3 +13,14 @@ export async function getProducts() {
         throw new Error("Não foi possível encontrar os produtos");
     }
 }
+
+export async function getAllProducts() {
+    try {
+        const products = await sql<Products>`SELECT * FROM products`;
+        console.log(products.rows);
+        return products.rows;
+    } catch (error) {
+        console.log(error);
+        throw new Error("Não foi possível encontrar os produtos");
+    }
+}

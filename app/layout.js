@@ -30,9 +30,10 @@ export default function RootLayout({ children }) {
                   width={50}
                   height={50}
                   alt="Baker Logo"
+                  href="/"
                 />
                 <li>
-                  <a href="/home">Produtos</a>
+                  <a href="/produtos">Produtos</a>
                 </li>
                 <li>
                   <a href="/contato">Contato</a>

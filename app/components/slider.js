@@ -33,6 +33,7 @@ export default function ProductSlider() {
 
     return (
         <Slider {...settings}>
+            {!products && <div>Loading...</div>}
             {products && products.map((product) => (
                 <div key={product.id}>
                     <ProductCard props={product}/>
